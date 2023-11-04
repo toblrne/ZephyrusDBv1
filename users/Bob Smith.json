@@ -1,0 +1,12 @@
+{
+	"Name": "Bob Smith",
+	"Age": 34,
+	"Contact": "555-5678",
+	"Company": "Global Enterprises",
+	"Address": {
+		"City": "New York",
+		"State": "NY",
+		"Country": "USA",
+		"Zipcode": 10001
+	}
+}

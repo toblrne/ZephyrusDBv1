@@ -1,0 +1,12 @@
+{
+	"Name": "Alice Johnson",
+	"Age": 29,
+	"Contact": "555-1234",
+	"Company": "Tech Solutions",
+	"Address": {
+		"City": "San Francisco",
+		"State": "CA",
+		"Country": "USA",
+		"Zipcode": 94105
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"Name": "Ethan Hunt",
+	"Age": 37,
+	"Contact": "555-2468",
+	"Company": "Spy Network",
+	"Address": {
+		"City": "Los Angeles",
+		"State": "CA",
+		"Country": "USA",
+		"Zipcode": 90001
+	}
+}

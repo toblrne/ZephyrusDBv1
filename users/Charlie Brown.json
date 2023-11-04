@@ -1,0 +1,12 @@
+{
+	"Name": "Charlie Brown",
+	"Age": 45,
+	"Contact": "555-9876",
+	"Company": "Shipping Logistics",
+	"Address": {
+		"City": "Chicago",
+		"State": "IL",
+		"Country": "USA",
+		"Zipcode": 60601
+	}
+}

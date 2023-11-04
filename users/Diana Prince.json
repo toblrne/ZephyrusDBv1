@@ -1,0 +1,12 @@
+{
+	"Name": "Diana Prince",
+	"Age": 31,
+	"Contact": "555-4321",
+	"Company": "Innovative Tech",
+	"Address": {
+		"City": "Seattle",
+		"State": "WA",
+		"Country": "USA",
+		"Zipcode": 98101
+	}
+}
