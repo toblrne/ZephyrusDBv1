@@ -112,7 +112,7 @@ func (d *Driver) Read(collection, resource string, v interface{}) error {
 
 	record := filepath.Join(d.dir, collection, resource)
 
-	if _, err := stat(record); err != nil {
+	if _, err := checkDir(record); err != nil {
 		return err
 	}
 
@@ -134,7 +134,7 @@ func (d *Driver) ReadAll(collection string) ([]string, error) {
 
 	dir := filepath.Join(d.dir, collection)
 
-	if _, err := stat(dir); err == nil {
+	if _, err := checkDir(dir); err != nil {
 		return nil, err
 	}
 
@@ -165,7 +165,7 @@ func (d *Driver) Delete(collection, resource string) error {
 
 	dir := filepath.Join(d.dir, path)
 
-	switch fi, err := stat(dir); {
+	switch fi, err := checkDir(dir); {
 
 	case fi == nil, err != nil:
 		return fmt.Errorf("unable to find file or directory named %v\n", path)
@@ -179,6 +179,13 @@ func (d *Driver) Delete(collection, resource string) error {
 
 	return nil
 
+}
+
+func checkDir(path string) (fi os.FileInfo, err error) {
+	if fi, err = os.Stat(path); os.IsNotExist(err) {
+		fi, err = os.Stat(path + ".json")
+	}
+	return
 }
 
 func (d *Driver) getOrCreateMutex(collection string) *sync.Mutex {
@@ -195,13 +202,6 @@ func (d *Driver) getOrCreateMutex(collection string) *sync.Mutex {
 
 	return m
 
-}
-
-func stat(path string) (fi os.FileInfo, err error) {
-	if fi, err = os.Stat(path); os.IsNotExist(err) {
-		fi, err = os.Stat(path + ".json")
-	}
-	return
 }
 
 type Address struct {
