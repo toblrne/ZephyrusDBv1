@@ -1,0 +1,12 @@
+{
+	"name": "John Doe",
+	"age": 30,
+	"contact": "john.doe@example.com",
+	"company": "Doe Inc",
+	"address": {
+		"city": "New York",
+		"state": "NY",
+		"country": "USA",
+		"zipcode": 10001
+	}
+}
