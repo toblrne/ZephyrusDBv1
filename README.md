@@ -1,2 +1,2 @@
 # ZephyrusDB
-from-scratch NoSQL document database written in Go + a Gin API layer
+NoSQL document database written in Go + a Gin REST API layer
